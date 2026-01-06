@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 - 社会实践申请</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "SimSun", "Songti SC", serif; /* 宋体更正式 */
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.08);
+            display: flex; /* 使用Flexbox布局 */
+            min-height: 1100px; /* 保证页面高度 */
+        }
+
+        /* 左侧栏样式 */
+        .sidebar {
+            width: 30%;
+            background-color: #004080; /* 深蓝色背景 */
+            color: #fff;
+            padding: 40px 25px;
+            text-align: center;
+        }
+        .profile-img {
+            width: 140px;
+            height: 180px;
+            border: 3px solid #fff;
+            margin: 0 auto 20px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .sidebar h1 {
+            font-size: 28px;
+            font-weight: normal;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+        }
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+        .sidebar h2 {
+            font-size: 18px;
+            border-bottom: 2px solid rgba(255,255,255,0.5);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        .sidebar p, .sidebar li {
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .sidebar li::before {
+            content: "▫";
+            color: #aad4ff;
+            margin-right: 8px;
+        }
+        .contact-info p {
+            word-break: break-all; /* 防止长邮箱/网址溢出 */
+        }
+
+        /* 右侧栏样式 */
+        .main-content {
+            width: 70%;
+            padding: 40px 35px;
+        }
+        .main-content h2 {
+            font-size: 22px;
+            color: #004080;
+            border-left: 5px solid #004080;
+            padding-left: 12px;
+            margin: 25px 0 15px;
+        }
+        .item {
+            margin-bottom: 20px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        .item-title {
+            font-weight: bold;
+            font-size: 17px;
+            color: #222;
+        }
+        .item-meta {
+            font-size: 14px;
+            color: #666;
+        }
+        .item-desc {
+            font-size: 15px;
+            color: #444;
+        }
+        .item-desc ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .item-desc li {
+            margin-bottom: 8px;
+        }
+
+        /* 奖学金表格样式 */
+        .scholarship-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .scholarship-table th, .scholarship-table td {
+            border: 1px solid #ddd;
+            padding: 8px 10px;
+            text-align: left;
+        }
+        .scholarship-table th {
+            background-color: #f0f5ff;
+            color: #004080;
+            font-weight: bold;
+        } 
+        
+        /* 页脚 */
+        footer {
+            text-align: right;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body { background: #fff; padding: 0; }
+            .container { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 左侧个人信息栏 -->
+        <aside class="sidebar">
+            <img src="avatar.jpg" alt="个人照片" class="profile-img">
+            <h1>王铭</h1>
+            
+            <div class="sidebar-section contact-info">
+                <h2>基本信息</h2>
+                <p><strong>政治面貌：</strong>共青团员</p>
+                <p><strong>出生年月：</strong>2006.04.06</p>
+                <p><strong>籍　　贯：</strong>四川省达州市</p>
+                <p><strong>民　　族：</strong>汉族</p>
+            </div>
+
+            <div class="sidebar-section contact-info">
+                <h2>联系方式</h2>
+                <p><strong>电　　话：</strong>17808051068</p>
+                <p><strong>邮　　箱：</strong>3083724729@qq.com</p>
+                <p><strong>Q　　Q：</strong>3083724729</p>
+            </div>
+
+ 
+
+            <div class="sidebar-section">
+                <h2>技能特长</h2>
+                <ul>
+                    <li>Office (Word/Excel/PPT)</li>
+                    <li>Photoshop / PR</li>
+                    <li>文案写作</li>
+                    <li>CET-4</li>
+		    <li>python,java,C++等编程语言，擅长利用计算机知识处理各种各样任务</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- 右侧主要内容栏 -->
+        <main class="main-content">
+            <!-- 教育背景 -->
+            <section id="education">
+                <h2>教育背景</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">长春理工大学 · 计算机科学技术学院</span>
+                        <span class="item-meta">2024.06 - 至今</span>
+                    </div>
+                    <div class="item-meta">计算机科学与技术 | 本科 | GPA: 4.05/5.0|排名9/588</div>
+                    <div class="item-desc">
+                        主修课程：数据结构、计算机网络、数据库原理、软件工程。<br>
+                        在校期间表现优异，积极参与各类学术讲座与社会实践活动。
+                    </div>
+                </div>
+            </section>
+
+            <!-- 奖学金及荣誉 (重点突出) -->
+            <section id="honors">
+                <h2>奖学金及荣誉称号</h2>
+                <table class="scholarship-table">
+                    <thead>
+                        <tr>
+                            <th>获奖时间</th>
+                            <th>奖项名称</th>
+                            <th>颁发单位</th>
+                            <th>等级</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-2025学年第一学期</td>
+                            <td>校级二等奖学金</td>
+                            <td>长春理工大学</td>
+                            <td>校级</td>
+                        </tr>
+                        <tr>
+                            <td>2024-2025学年第二学期</td>
+                            <td>校级二等奖学金</td>
+                            <td>长春理工大学</td>
+                            <td>校级</td>
+                        </tr>
+                        <tr>
+                            <td>2025-2026学年</td>
+                            <td>王大珩专项奖学金</td>
+                            <td>长春理工大学</td>
+                            <td>校级</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 实践经历 -->
+            <section id="experience">
+                <h2>实践经历</h2>
+                <div class="item">
+                    <div class="item-header">
+                        <span class="item-title">校园ACM系列赛事 | 组织人员</span>
+                        <span class="item-meta">2025.06 - 至今</span>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li>负责统筹规划学科竞赛人员统计</li>
+                            <li>参与策划竞赛场地布置，并作为工作人员，配合老师完成将近审核500余人的身份信息</li>
+                        </ul>
+                    </div>
+                </div>
+		<div class="item">
+                    <div class="item-header">
+                        <span class="item-title"> 组织部| 工作人员</span>
+                        <span class="item-meta">2025.09 - 至今</span>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li></li>
+                            <li>大型活动统筹：围绕迎新、主题晚会等，完成方案策划、场地与物资、宣传与现场组织、复盘总结的全流程管理。</li>
+			    <li>品牌与特色活动：打造主题团日、例如班级的节日特色团日，策划特点节目，提升参与度与影响力。</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 自我评价 -->
+            <section id="self-assessment">
+                <h2>自我评价</h2>
+                <div class="item-desc">
+                    <ul>
+                        <li><strong>思想端正：</strong>政治立场坚定，积极向党组织靠拢，时刻以优秀共青团员的标准要求自己。</li>
+                        <li><strong>能力全面：</strong>具备扎实的文字功底和一定的设计能力，能胜任实践团的宣传与记录工作。</li>
+                        <li><strong>作风优良：</strong>性格开朗，责任心强，吃苦耐劳，拥有良好的团队协作精神和沟通表达能力。</li>
+                        <li><strong>意愿强烈：</strong>渴望通过社会实践深入基层，了解国情民情，在服务社会中贡献青春力量。</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>日　　期：2026年1月5日</p>
+    </footer>
+
+</body>
+</html>
